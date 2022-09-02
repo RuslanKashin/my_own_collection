@@ -1,0 +1,10 @@
+---
+# tasks file for my_own_module
+   - name: run the new module
+     my_own_module:
+       path: '/tmp/my_file2.txt'
+       content: 'My file2 content!'
+     register: testout
+   - name: dump test output
+     debug:
+       msg: '{{ testout }}'
